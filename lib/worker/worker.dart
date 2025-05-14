@@ -48,7 +48,7 @@ class Worker {
          airSpeed = 'Data is not founded';
          description = 'Data is not founded';
          main = 'Data is not founded';
-       }
+   }
 
   }
 }
