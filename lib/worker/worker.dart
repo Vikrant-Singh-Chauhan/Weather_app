@@ -10,6 +10,7 @@ class Worker {
   String? airSpeed;
   String? description;
   String? main;
+  String? icon;
 
   Worker({this.location});
 
@@ -31,6 +32,8 @@ class Worker {
        double getAirSpeed = windData["speed"].toDouble();
        String getMainDes = weatherDetails["main"];
        String getDesc = weatherDetails["description"];
+       String getIcon = weatherDetails["icon"];
+
 
        // Assign formatted values
        temp = getTemp.toStringAsFixed(1);
@@ -38,16 +41,17 @@ class Worker {
        airSpeed = getAirSpeed.toStringAsFixed(1);
        description = getDesc;
        main = getMainDes;
+       icon = getIcon;
      } else {
        print("Failed to load weather data: ${response.statusCode}");
      }
-   }
-       catch(e){
+   }catch(e){
          temp = 'Data is not founded';
          humidity = 'Data is not founded';
          airSpeed = 'Data is not founded';
          description = 'Data is not founded';
          main = 'Data is not founded';
+         icon = '10d';
    }
 
   }
